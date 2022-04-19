@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
 import CoachDetail from './pages/coaches/CoachDetail.vue';
-import CoachesList from './pages/coaches/CoachList.vue';
+import CoachesList from './pages/coaches/CoachesList.vue';
 import CoachRegistration from './pages/coaches/CoachRegistration.vue';
 import ContactCoach from './pages/requests/ContactCoach.vue';
 import RequestsReceived from './pages/requests/RequestsReceived.vue';
@@ -11,7 +11,7 @@ const router = createRouter({
   history: createWebHistory(),
   routes: [
     { path: '/', redirect: 'coaches' }, // redirect to this page when no page chosen
-    { path: '/coaches', CoachesList },
+    { path: '/coaches', component: CoachesList },
     {
       path: '/coaches/:id',
       component: CoachDetail,

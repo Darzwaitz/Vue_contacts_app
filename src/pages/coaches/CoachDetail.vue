@@ -53,6 +53,7 @@ export default {
       // return this.$route.path + '/contact';
     },
   },
+  // life cycle hook here
   created() {
     this.selectedCoach = this.$store.getters['coaches/coaches'].find(
       (coach) => coach.id === this.id

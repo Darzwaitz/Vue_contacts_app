@@ -30,6 +30,10 @@ export default {
     });
   },
   async loadCoaches(context) {
+    if (!payload.forceRefresh && !context.getters.shouldUpdate) {
+      return;
+    }
+
     const response = await fetch(
       `https://vue-coach-app-7b128-default-rtdb.europe-west1.firebasedatabase.app/coaches.json`
     );

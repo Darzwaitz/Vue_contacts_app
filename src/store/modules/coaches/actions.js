@@ -36,7 +36,7 @@ export default {
     // }
 
     const response = await fetch(
-      `https://vue-coach-app-7b128-default-rtdb.europe-west1.firebasedatabase.app/coaches.jso`
+      `https://vue-coach-app-7b128-default-rtdb.europe-west1.firebasedatabase.app/coaches.json`
     );
     const responseData = await response.json();
 

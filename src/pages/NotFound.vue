@@ -9,4 +9,3 @@
     </base-card>
   </section>
 </template>
-<base-card></base-card>

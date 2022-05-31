@@ -9,8 +9,11 @@ export default {
       areas: data.areas,
     };
 
+    const token = context.rootGetters.token;
+
     const response = await fetch(
-      `https://vue-coach-app-7b128-default-rtdb.europe-west1.firebasedatabase.app/coaches/${userId}.json`,
+      `https://vue-coach-app-7b128-default-rtdb.europe-west1.firebasedatabase.app/coaches/${userId}.json?auth=` +
+        token,
       {
         // PUT - overwrite data if it doesn't already exist - POST would newly create it every time - this way we have one entry per created user acc./coach
         method: 'PUT',
